@@ -42,17 +42,7 @@ app.get("/api/notes", function(req, res) {
   return res.json(parsedNotes);
 });
 
-// app.get("/api/notes/:id", function(req, res) {
-//   let chosen = req.params.id;
-//   for (var i = 0; i < parsedNotes.length; i++) {
-//     if (chosen === parsedNotes[i].routeName) {
-//       return res.json(parsedNotes[i]);
-//     }
-//   }
-
-//   return res.json(false);
-// });
-
+// the function to post to the left side on save
 let idInc = 1;
 app.post("/api/notes", function(req, res) {
   let newEntry = req.body;
